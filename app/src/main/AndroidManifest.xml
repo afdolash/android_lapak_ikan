@@ -10,7 +10,13 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".activity.SplashActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".activity.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -25,18 +31,14 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.LapakActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".activity.BasketActivity" />
         <activity android:name=".activity.ChatActivity" />
         <activity android:name=".activity.SettingsActivity" />
         <activity android:name=".activity.AboutActivity" />
-        <activity android:name=".activity.SearchActivity"></activity>
+        <activity
+            android:name=".activity.SearchActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>

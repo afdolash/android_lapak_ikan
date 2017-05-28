@@ -67,6 +67,7 @@
             </android.support.design.widget.TextInputLayout>
 
             <TextView
+                android:id="@+id/tv_reset"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
@@ -75,6 +76,7 @@
                 android:textColor="@color/colorAccent"/>
 
             <TextView
+                android:id="@+id/tv_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
@@ -83,6 +85,7 @@
                 android:textColor="@color/colorAccent"/>
 
             <Button
+                android:id="@+id/btn_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
