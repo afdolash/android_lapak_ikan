@@ -18,9 +18,14 @@
             android:title="@string/nav_lapakku" />
 
         <item
-            android:id="@+id/nav_pesan"
+            android:id="@+id/nav_basket"
             android:icon="@mipmap/ic_launcher"
-            android:title="@string/nav_pesan" />
+            android:title="@string/nav_basket" />
+
+        <item
+            android:id="@+id/nav_chat"
+            android:icon="@mipmap/ic_launcher"
+            android:title="@string/nav_chat" />
 
     </group>
 

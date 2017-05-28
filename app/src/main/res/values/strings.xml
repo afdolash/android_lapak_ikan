@@ -11,7 +11,8 @@
     <string name="nav_beranda">Beranda</string>
     <string name="nav_profile">Profil</string>
     <string name="nav_lapakku">LapakKu</string>
-    <string name="nav_pesan">Pesan</string>
+    <string name="nav_basket">Keranjang</string>
+    <string name="nav_chat">Obrolan</string>
     <string name="nav_settings">Pengaturan</string>
     <string name="nav_about">Tentang Kami</string>
     <string name="nav_logout">Keluar</string>
@@ -21,7 +22,6 @@
         <item>Lapak Ikan</item>
         <item>Profil</item>
         <item>Lapak Ku</item>
-        <item>Pesan</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->

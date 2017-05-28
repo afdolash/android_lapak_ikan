@@ -17,7 +17,6 @@ import android.view.View;
 import com.developer.bismillah.lapakikan.R;
 import com.developer.bismillah.lapakikan.fragment.BerandaFragment;
 import com.developer.bismillah.lapakikan.fragment.LapakkuFragment;
-import com.developer.bismillah.lapakikan.fragment.PesanFragment;
 import com.developer.bismillah.lapakikan.fragment.ProfileFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     private static final String TAG_BERANDA = "beranda";
     private static final String TAG_PROFILE = "profil";
     private static final String TAG_LAPAKKU = "lapakku";
-    private static final String TAG_PESAN = "pesan";
     public static String CURRENT_TAG = TAG_BERANDA;
 
     // Toolbar titles respected to selected nav menu item
@@ -101,22 +99,29 @@ public class MainActivity extends AppCompatActivity {
                         navItemIndex = 2;
                         CURRENT_TAG = TAG_LAPAKKU;
                         break;
-                    case R.id.nav_pesan:
-                        navItemIndex = 3;
-                        CURRENT_TAG = TAG_PESAN;
-                        break;
+                    case R.id.nav_basket:
+                        // Launch new intent instead of loading fragment
+                        startActivity(new Intent(MainActivity.this, BasketActivity.class));
+                         drawer.closeDrawers();
+                        return true;
+                    case R.id.nav_chat:
+                        // Launch new intent instead of loading fragment
+                        startActivity(new Intent(MainActivity.this, ChatActivity.class));
+                        drawer.closeDrawers();
+                        return true;
                     case R.id.nav_settings:
                         // Launch new intent instead of loading fragment
-                        // startActivity(new Intent(MainActivity.this, SettingsActivity.class));
-                        // drawer.closeDrawers();
+                        startActivity(new Intent(MainActivity.this, SettingsActivity.class));
+                        drawer.closeDrawers();
                         return true;
                     case R.id.nav_about:
                         // Launch new intent instead of loading fragment
-                        // startActivity(new Intent(MainActivity.this, AboutActivity.class));
-                        // drawer.closeDrawers();
+                        startActivity(new Intent(MainActivity.this, AboutActivity.class));
+                        drawer.closeDrawers();
                         return true;
                     case R.id.nav_logout:
                         // Launch function to account logout
+                        finish();
                         return true;
                     default:
                         navItemIndex = 0;
@@ -216,13 +221,8 @@ public class MainActivity extends AppCompatActivity {
                 // Lapakku fragment
                 LapakkuFragment lapakkuFragment = new LapakkuFragment();
                 return lapakkuFragment;
-            case 3:
-                // Pesan fragment
-                PesanFragment pesanFragment = new PesanFragment();
-                return pesanFragment;
             default:
                 return new BerandaFragment();
-
         }
     }
 
